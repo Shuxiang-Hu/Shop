@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.shuxiang.Factory.OrderDaoFactory" factory-method="getOrderDao"/>
+    <bean class="com.shuxiang.BookDaoImpl"/>
+    <bean id="userDao" class="com.shuxiang.Factory.UserDaoFactoryBean"/>
+    <bean id="bookService" class="com.shuxiang.Service.Impl.BookServiceImpl" autowire="byType"/>
+
+
+
+</beans>
